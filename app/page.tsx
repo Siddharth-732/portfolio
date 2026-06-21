@@ -1,5 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
+import { 
+  SiPython, SiJavascript, SiTypescript, SiCplusplus, SiDotnet, SiMysql,
+  SiReact, SiNextdotjs, SiTailwindcss, SiNodedotjs, SiExpress,
+  SiMongodb, SiFirebase, SiGit, SiGithub, SiPostman
+} from 'react-icons/si';
 
 export default function Home() {
   return (
@@ -51,31 +56,52 @@ export default function Home() {
       <section id="tech-stack" className="py-24 border-b border-white/10">
         <div className="max-w-6xl mx-auto px-8">
           <h2 className="text-4xl text-center mb-12 relative after:content-[''] after:absolute after:-bottom-3 after:left-1/2 after:-translate-x-1/2 after:w-16 after:h-1 after:bg-[#3b82f6] after:rounded-sm after:shadow-[0_0_10px_rgba(59,130,246,0.4)] font-playfair text-[#f5f5f5]">My Tech Stack</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {/* Languages */}
             <div className="bg-[#141414] border border-[#262626] rounded-xl p-8 transition-all duration-300 hover:-translate-y-2 hover:border-[#3b82f6] hover:bg-[#1f1f1f] hover:shadow-[0_10px_30px_rgba(0,0,0,0.5),0_0_15px_rgba(59,130,246,0.4)] group">
-              <h3 className="text-2xl mb-4 font-playfair text-[#f5f5f5]">Languages & Core</h3>
-              <div className="flex flex-wrap gap-2">
-                {['Python', 'JavaScript (ES6+)', 'TypeScript', 'C++', 'C#', 'SQL'].map(skill => (
-                  <span key={skill} className="inline-block px-4 py-2 bg-white/5 border border-[#262626] rounded-full text-sm text-[#a3a3a3] transition-all duration-300 group-hover:hover:text-white group-hover:hover:border-[#3b82f6] group-hover:hover:bg-[#3b82f6]/10 font-inter">{skill}</span>
-                ))}
+              <h3 className="text-xl mb-6 font-playfair text-[#f5f5f5] text-center">Languages</h3>
+              <div className="grid grid-cols-2 gap-6">
+                <div className="flex flex-col items-center gap-2 text-[#a3a3a3] group-hover:text-white transition-colors"><SiPython size={32} /> <span className="text-xs">Python</span></div>
+                <div className="flex flex-col items-center gap-2 text-[#a3a3a3] group-hover:text-white transition-colors"><SiJavascript size={32} /> <span className="text-xs">JavaScript</span></div>
+                <div className="flex flex-col items-center gap-2 text-[#a3a3a3] group-hover:text-white transition-colors"><SiTypescript size={32} /> <span className="text-xs">TypeScript</span></div>
+                <div className="flex flex-col items-center gap-2 text-[#a3a3a3] group-hover:text-white transition-colors"><SiCplusplus size={32} /> <span className="text-xs">C++</span></div>
+                <div className="flex flex-col items-center gap-2 text-[#a3a3a3] group-hover:text-white transition-colors"><SiDotnet size={32} /> <span className="text-xs">C#</span></div>
+                <div className="flex flex-col items-center gap-2 text-[#a3a3a3] group-hover:text-white transition-colors"><SiMysql size={32} /> <span className="text-xs">SQL</span></div>
               </div>
             </div>
+
+            {/* Frameworks */}
             <div className="bg-[#141414] border border-[#262626] rounded-xl p-8 transition-all duration-300 hover:-translate-y-2 hover:border-[#3b82f6] hover:bg-[#1f1f1f] hover:shadow-[0_10px_30px_rgba(0,0,0,0.5),0_0_15px_rgba(59,130,246,0.4)] group">
-              <h3 className="text-2xl mb-4 font-playfair text-[#f5f5f5]">Frontend & Design</h3>
-              <div className="flex flex-wrap gap-2">
-                {['React.js', 'Next.js', 'Tailwind CSS', 'Zustand', 'HTML5/CSS3', 'Responsive Design'].map(skill => (
-                  <span key={skill} className="inline-block px-4 py-2 bg-white/5 border border-[#262626] rounded-full text-sm text-[#a3a3a3] transition-all duration-300 group-hover:hover:text-white group-hover:hover:border-[#3b82f6] group-hover:hover:bg-[#3b82f6]/10 font-inter">{skill}</span>
-                ))}
+              <h3 className="text-xl mb-6 font-playfair text-[#f5f5f5] text-center">Frameworks</h3>
+              <div className="grid grid-cols-2 gap-6">
+                <div className="flex flex-col items-center gap-2 text-[#a3a3a3] group-hover:text-white transition-colors"><SiReact size={32} /> <span className="text-xs">React.js</span></div>
+                <div className="flex flex-col items-center gap-2 text-[#a3a3a3] group-hover:text-white transition-colors"><SiNextdotjs size={32} /> <span className="text-xs">Next.js</span></div>
+                <div className="flex flex-col items-center gap-2 text-[#a3a3a3] group-hover:text-white transition-colors"><SiTailwindcss size={32} /> <span className="text-xs">Tailwind</span></div>
+                <div className="flex flex-col items-center gap-2 text-[#a3a3a3] group-hover:text-white transition-colors"><SiNodedotjs size={32} /> <span className="text-xs">Node.js</span></div>
+                <div className="flex flex-col items-center gap-2 text-[#a3a3a3] group-hover:text-white transition-colors"><SiExpress size={32} /> <span className="text-xs">Express.js</span></div>
               </div>
             </div>
+
+            {/* Databases */}
             <div className="bg-[#141414] border border-[#262626] rounded-xl p-8 transition-all duration-300 hover:-translate-y-2 hover:border-[#3b82f6] hover:bg-[#1f1f1f] hover:shadow-[0_10px_30px_rgba(0,0,0,0.5),0_0_15px_rgba(59,130,246,0.4)] group">
-              <h3 className="text-2xl mb-4 font-playfair text-[#f5f5f5]">Backend & DevOps</h3>
-              <div className="flex flex-wrap gap-2">
-                {['Node.js', 'Express.js', 'RESTful APIs', 'MongoDB', 'MySQL', 'Firebase', 'Git/GitHub'].map(skill => (
-                  <span key={skill} className="inline-block px-4 py-2 bg-white/5 border border-[#262626] rounded-full text-sm text-[#a3a3a3] transition-all duration-300 group-hover:hover:text-white group-hover:hover:border-[#3b82f6] group-hover:hover:bg-[#3b82f6]/10 font-inter">{skill}</span>
-                ))}
+              <h3 className="text-xl mb-6 font-playfair text-[#f5f5f5] text-center">Databases</h3>
+              <div className="grid grid-cols-2 gap-6">
+                <div className="flex flex-col items-center gap-2 text-[#a3a3a3] group-hover:text-white transition-colors"><SiMongodb size={32} /> <span className="text-xs">MongoDB</span></div>
+                <div className="flex flex-col items-center gap-2 text-[#a3a3a3] group-hover:text-white transition-colors"><SiMysql size={32} /> <span className="text-xs">MySQL</span></div>
+                <div className="flex flex-col items-center gap-2 text-[#a3a3a3] group-hover:text-white transition-colors"><SiFirebase size={32} /> <span className="text-xs">Firebase</span></div>
               </div>
             </div>
+
+            {/* DevTools */}
+            <div className="bg-[#141414] border border-[#262626] rounded-xl p-8 transition-all duration-300 hover:-translate-y-2 hover:border-[#3b82f6] hover:bg-[#1f1f1f] hover:shadow-[0_10px_30px_rgba(0,0,0,0.5),0_0_15px_rgba(59,130,246,0.4)] group">
+              <h3 className="text-xl mb-6 font-playfair text-[#f5f5f5] text-center">DevTools</h3>
+              <div className="grid grid-cols-2 gap-6">
+                <div className="flex flex-col items-center gap-2 text-[#a3a3a3] group-hover:text-white transition-colors"><SiGit size={32} /> <span className="text-xs">Git</span></div>
+                <div className="flex flex-col items-center gap-2 text-[#a3a3a3] group-hover:text-white transition-colors"><SiGithub size={32} /> <span className="text-xs">GitHub</span></div>
+                <div className="flex flex-col items-center gap-2 text-[#a3a3a3] group-hover:text-white transition-colors"><SiPostman size={32} /> <span className="text-xs">REST APIs</span></div>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
