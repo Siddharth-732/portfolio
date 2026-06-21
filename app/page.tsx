@@ -30,7 +30,7 @@ export default function Home() {
           <div className="animate-fade-in opacity-0 flex justify-center" style={{ animationDelay: '300ms', animationFillMode: 'forwards' }}>
             <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-[#262626]">
               {/* Profile Image PlaceHolder */}
-              <Image src="/profile.jpg" alt="Siddharth Pandey" fill className="object-cover" />
+              <Image src="/self.png" alt="Siddharth Pandey" fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" />
             </div>
           </div>
         </div>
@@ -155,7 +155,7 @@ export default function Home() {
             </div>
             <div className="relative w-full h-80 md:h-full min-h-[400px] rounded-xl overflow-hidden border border-[#262626] shadow-2xl">
               {/* Hackathon Image PlaceHolder */}
-              <Image src="/hackathon.jpg" alt="MLH HackByte 3.0 Winner" fill className="object-cover" />
+              <Image src="/hackbyte.jpg" alt="MLH HackByte 3.0 Winner" fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" />
             </div>
           </div>
         </div>
