@@ -23,7 +23,7 @@ import Aurora from "../components/Aurora";
 export default function Home() {
   return (
     <main>
-      {/* Hero Section */}
+      {/*Hero Section*/}
       <section className="relative py-24 md:py-40 min-h-[80vh] flex items-center border-b border-white/10 overflow-hidden">
         <Aurora colorStops={["#67ffe0", "#5c80f6", "#883afe"]} speed={0.5} />
         <div className="relative z-10 max-w-6xl mx-auto px-8 w-full grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
