@@ -62,13 +62,15 @@ export default function Home() {
             <div className="relative w-full max-w-[300px] md:max-w-[400px] h-[400px] md:h-[500px]">
               {/* Profile Image PlaceHolder */}
               <Image
-                src="/self1.png"
+                src="/divine_owl.jpg"
                 alt="Siddharth Pandey"
                 fill
-                className="object-contain object-bottom drop-shadow-[0_100px_70px_rgba(59,130,246,0.3)]"
+                className="object-contain object-bottom drop-shadow-[0_100px_70px_rgba(59,130,246,0.3)] z-10"
                 sizes="(max-width: 768px) 100vw, 50vw"
                 priority
               />
+              {/* Neon Line */}
+              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[120%] h-[2px] bg-[#3b82f6]/50 shadow-[0_0_20px_rgba(59,130,246,0.8)] z-20 rounded-full"></div>
             </div>
           </div>
         </div>
