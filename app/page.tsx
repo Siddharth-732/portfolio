@@ -62,7 +62,7 @@ export default function Home() {
             <div className="relative w-full max-w-[300px] md:max-w-[400px] h-[400px] md:h-[500px]">
               {/* Profile Image PlaceHolder */}
               <Image
-                src="/self.png"
+                src="/self1.png"
                 alt="Siddharth Pandey"
                 fill
                 className="object-contain object-bottom drop-shadow-[0_100px_70px_rgba(59,130,246,0.3)]"
