@@ -119,7 +119,7 @@ export default function Page() {
               <a
                 href="/resume.pdf"
                 download="Siddharth_Pandey_Resume.pdf"
-                className="flex items-center justify-center gap-2 px-8 py-3 sm:px-10 sm:py-4 bg-white text-black font-semibold rounded-full hover:scale-105 transition-transform duration-300 text-sm sm:text-base w-full sm:w-fit"
+                className="flex items-center justify-center gap-2 px-8 py-3 sm:px-10 sm:py-4 bg-white/10 hover:bg-white/20 text-white border border-white/30 backdrop-blur-3xl font-semibold rounded-sm text-sm sm:text-base w-120 ml-5"
               >
                 <Download className="w-5 h-5" />
                 Download Resume
