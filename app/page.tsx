@@ -50,8 +50,6 @@ const skillCategories = [
       { name: "next.js", Icon: SiNextdotjs, color: "#ffffff" },
       { name: "node.js", Icon: SiNodedotjs, color: "#339933" },
       { name: "express.js", Icon: SiExpress, color: "#ffffff" },
-      { name: "css3", Icon: TbBrandCss3, color: "#1572B6" },
-      { name: "html5", Icon: SiHtml5, color: "#E34F26" },
       { name: "react", Icon: SiReact, color: "#61DAFB" },
       { name: "tailwindcss", Icon: SiTailwindcss, color: "#38B2AC" },
     ],
