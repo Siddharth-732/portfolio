@@ -132,6 +132,177 @@ export default function Page() {
           </div>
         </div>
       </section>
+      <div className="w-full h-[1px] bg-white/20 my-4"></div>
+      {/* Experience Section */}
+      {/* Experience Section */}
+      <section className="relative z-10 min-h-screen w-full px-8 py-24 sm:px-24 lg:px-32 flex flex-col items-center max-w-7xl mx-auto mt-12 sm:mt-0">
+        <div className="w-full flex flex-col items-start mb-24">
+          <h2 className="text-6xl sm:text-7xl md:text-8xl font-serif font-medium tracking-tight drop-shadow-2xl">
+            Experience
+          </h2>
+        </div>
+
+        {/* Timeline */}
+        <div className="w-full flex flex-col relative before:absolute before:inset-0 before:left-[80px] sm:before:left-[150px] before:h-full before:w-[1px] before:bg-white/10 pb-24">
+          
+          {/* Item 1 */}
+          <div className="relative flex items-start group mb-12 sm:mb-16 last:mb-0">
+            {/* Date */}
+            <div className="w-[80px] sm:w-[150px] shrink-0 pt-2 text-right pr-6 sm:pr-10 text-[10px] sm:text-xs font-bold tracking-[0.2em] text-neutral-400 uppercase">
+              2026 — FEB
+            </div>
+            
+            {/* Dot */}
+            <div className="absolute left-[80px] sm:left-[150px] -translate-x-1/2 mt-2 w-2.5 h-2.5 bg-white rounded-full ring-[6px] ring-[#0a0a0a]"></div>
+            
+            {/* Card */}
+            <div className="ml-6 sm:ml-12 w-full bg-[#111] rounded-[24px] p-6 sm:p-10 border border-white/5 hover:border-white/10 transition-colors duration-300">
+              <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-6">
+                <div className="flex flex-col">
+                  <h3 className="font-serif font-bold text-2xl sm:text-3xl text-white">GSOC26 Contributor</h3>
+                  <div className="text-teal-400 mt-2 font-medium text-sm sm:text-base">
+                    SugarLabs & Cunefied Digital Library
+                  </div>
+                </div>
+              </div>
+              <ul className="text-neutral-400 text-sm sm:text-base leading-relaxed space-y-3 list-disc list-inside marker:text-teal-500/50">
+                <li>Contributed to open source projects of organizations like SugarLabs and Cunefied digital library initiative.</li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Item 2 */}
+          <div className="relative flex items-start group mb-12 sm:mb-16 last:mb-0">
+            <div className="w-[80px] sm:w-[150px] shrink-0 pt-2 text-right pr-6 sm:pr-10 text-[10px] sm:text-xs font-bold tracking-[0.2em] text-neutral-400 uppercase">
+              2025 — DEC
+            </div>
+            <div className="absolute left-[80px] sm:left-[150px] -translate-x-1/2 mt-2 w-2.5 h-2.5 bg-neutral-600 group-hover:bg-neutral-400 transition-colors duration-300 rounded-full ring-[6px] ring-[#0a0a0a]"></div>
+            <div className="ml-6 sm:ml-12 w-full bg-[#111] rounded-[24px] p-6 sm:p-10 border border-white/5 hover:border-white/10 transition-colors duration-300">
+              <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-6">
+                <div className="flex flex-col">
+                  <h3 className="font-serif font-bold text-2xl sm:text-3xl text-white">Core Committee Member</h3>
+                  <div className="text-teal-400 mt-2 font-medium text-sm sm:text-base">
+                    Abhikalpan (IIITDM Techfest)
+                  </div>
+                </div>
+              </div>
+              <ul className="text-neutral-400 text-sm sm:text-base leading-relaxed space-y-3 list-disc list-inside marker:text-teal-500/50">
+                <li>Helped organize IIITDM's annual techfest, managing events and coordinating with various teams to ensure a successful execution.</li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Item 3 */}
+          <div className="relative flex items-start group mb-12 sm:mb-16 last:mb-0">
+            <div className="w-[80px] sm:w-[150px] shrink-0 pt-2 text-right pr-6 sm:pr-10 text-[10px] sm:text-xs font-bold tracking-[0.2em] text-neutral-400 uppercase">
+              2025 — SEP
+            </div>
+            <div className="absolute left-[80px] sm:left-[150px] -translate-x-1/2 mt-2 w-2.5 h-2.5 bg-neutral-600 group-hover:bg-neutral-400 transition-colors duration-300 rounded-full ring-[6px] ring-[#0a0a0a]"></div>
+            <div className="ml-6 sm:ml-12 w-full bg-[#111] rounded-[24px] p-6 sm:p-10 border border-white/5 hover:border-white/10 transition-colors duration-300">
+              <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-6">
+                <div className="flex flex-col">
+                  <h3 className="font-serif font-bold text-2xl sm:text-3xl text-white">Team Lead (SIH 2025)</h3>
+                  <div className="text-teal-400 mt-2 font-medium text-sm sm:text-base">
+                    Smart India Hackathon
+                  </div>
+                </div>
+              </div>
+              <ul className="text-neutral-400 text-sm sm:text-base leading-relaxed space-y-3 list-disc list-inside marker:text-teal-500/50">
+                <li>Led a team to create a smart traffic management system for Indian Railways.</li>
+                <li>Developed predictive algorithms to identify best routes and possibilities for train scheduling.</li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Item 4 */}
+          <div className="relative flex items-start group mb-12 sm:mb-16 last:mb-0">
+            <div className="w-[80px] sm:w-[150px] shrink-0 pt-2 text-right pr-6 sm:pr-10 text-[10px] sm:text-xs font-bold tracking-[0.2em] text-neutral-400 uppercase">
+              2025 — MAY
+            </div>
+            <div className="absolute left-[80px] sm:left-[150px] -translate-x-1/2 mt-2 w-2.5 h-2.5 bg-neutral-600 group-hover:bg-neutral-400 transition-colors duration-300 rounded-full ring-[6px] ring-[#0a0a0a]"></div>
+            <div className="ml-6 sm:ml-12 w-full bg-[#111] rounded-[24px] p-6 sm:p-10 border border-white/5 hover:border-white/10 transition-colors duration-300">
+              <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-6">
+                <div className="flex flex-col">
+                  <h3 className="font-serif font-bold text-2xl sm:text-3xl text-white">Fullstack Intern</h3>
+                  <div className="text-teal-400 mt-2 font-medium text-sm sm:text-base">
+                    Datavio
+                  </div>
+                </div>
+              </div>
+              <ul className="text-neutral-400 text-sm sm:text-base leading-relaxed space-y-3 list-disc list-inside marker:text-teal-500/50">
+                <li>Engineered an automated alert system to detect unauthorized third-party sellers on Flipkart for client Boldfit.</li>
+                <li>Designed and delivered an end-to-end Purchase Order lifecycle management dashboard for Bikaji Foods.</li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Item 5 */}
+          <div className="relative flex items-start group mb-12 sm:mb-16 last:mb-0">
+            <div className="w-[80px] sm:w-[150px] shrink-0 pt-2 text-right pr-6 sm:pr-10 text-[10px] sm:text-xs font-bold tracking-[0.2em] text-neutral-400 uppercase">
+              2025 — APR
+            </div>
+            <div className="absolute left-[80px] sm:left-[150px] -translate-x-1/2 mt-2 w-2.5 h-2.5 bg-neutral-600 group-hover:bg-neutral-400 transition-colors duration-300 rounded-full ring-[6px] ring-[#0a0a0a]"></div>
+            <div className="ml-6 sm:ml-12 w-full bg-[#111] rounded-[24px] p-6 sm:p-10 border border-white/5 hover:border-white/10 transition-colors duration-300">
+              <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-6">
+                <div className="flex flex-col">
+                  <h3 className="font-serif font-bold text-2xl sm:text-3xl text-white">HackByte 3.0 Winner</h3>
+                  <div className="text-teal-400 mt-2 font-medium text-sm sm:text-base">
+                    MLH Hackathon
+                  </div>
+                </div>
+              </div>
+              <ul className="text-neutral-400 text-sm sm:text-base leading-relaxed space-y-3 list-disc list-inside marker:text-teal-500/50">
+                <li>Created InstiCon, a Unity6 3D community platform for real-time cross-college collaboration.</li>
+                <li>Awarded 1st Prize overall.</li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Item 6 */}
+          <div className="relative flex items-start group mb-12 sm:mb-16 last:mb-0">
+            <div className="w-[80px] sm:w-[150px] shrink-0 pt-2 text-right pr-6 sm:pr-10 text-[10px] sm:text-xs font-bold tracking-[0.2em] text-neutral-400 uppercase">
+              2024 — NOV
+            </div>
+            <div className="absolute left-[80px] sm:left-[150px] -translate-x-1/2 mt-2 w-2.5 h-2.5 bg-neutral-600 group-hover:bg-neutral-400 transition-colors duration-300 rounded-full ring-[6px] ring-[#0a0a0a]"></div>
+            <div className="ml-6 sm:ml-12 w-full bg-[#111] rounded-[24px] p-6 sm:p-10 border border-white/5 hover:border-white/10 transition-colors duration-300">
+              <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-6">
+                <div className="flex flex-col">
+                  <h3 className="font-serif font-bold text-2xl sm:text-3xl text-white">Drone Development Project</h3>
+                  <div className="text-teal-400 mt-2 font-medium text-sm sm:text-base">
+                    SAE India25
+                  </div>
+                </div>
+              </div>
+              <ul className="text-neutral-400 text-sm sm:text-base leading-relaxed space-y-3 list-disc list-inside marker:text-teal-500/50">
+                <li>Worked on a 6-month autonomous drone development project.</li>
+                <li>Received the Best Autonomous Drone award.</li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Item 7 */}
+          <div className="relative flex items-start group mb-12 sm:mb-16 last:mb-0">
+            <div className="w-[80px] sm:w-[150px] shrink-0 pt-2 text-right pr-6 sm:pr-10 text-[10px] sm:text-xs font-bold tracking-[0.2em] text-neutral-400 uppercase">
+              2024 — MAR
+            </div>
+            <div className="absolute left-[80px] sm:left-[150px] -translate-x-1/2 mt-2 w-2.5 h-2.5 bg-neutral-600 group-hover:bg-neutral-400 transition-colors duration-300 rounded-full ring-[6px] ring-[#0a0a0a]"></div>
+            <div className="ml-6 sm:ml-12 w-full bg-[#111] rounded-[24px] p-6 sm:p-10 border border-white/5 hover:border-white/10 transition-colors duration-300">
+              <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-6">
+                <div className="flex flex-col">
+                  <h3 className="font-serif font-bold text-2xl sm:text-3xl text-white">2nd Runner-up</h3>
+                  <div className="text-teal-400 mt-2 font-medium text-sm sm:text-base">
+                    Cognizant IIT Roorkee Hackathon
+                  </div>
+                </div>
+              </div>
+              <ul className="text-neutral-400 text-sm sm:text-base leading-relaxed space-y-3 list-disc list-inside marker:text-teal-500/50">
+                <li>Competed against top teams in a prestigious hackathon at IIT Roorkee and secured 3rd place overall.</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </section>
     </div>
   );
 }
