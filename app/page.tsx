@@ -1,6 +1,83 @@
 import Prism from "../components/Prism";
 import Typewriter from "../components/Typewriter";
-import { Users, FolderGit2, Download } from "lucide-react";
+import {
+  Users,
+  FolderGit2,
+  Download,
+  Code2,
+  Blocks,
+  Database,
+  Wrench,
+} from "lucide-react";
+import { TbBrandCSharp, TbBrandCss3, TbBrandVscode } from "react-icons/tb";
+import {
+  SiCplusplus,
+  SiPython,
+  SiJavascript,
+  SiPhp,
+  SiNextdotjs,
+  SiNodedotjs,
+  SiExpress,
+  SiHtml5,
+  SiReact,
+  SiTailwindcss,
+  SiMysql,
+  SiPostgresql,
+  SiMongodb,
+  SiFigma,
+  SiGit,
+  SiDocker,
+  SiFirebase,
+  SiPostman,
+} from "react-icons/si";
+
+const skillCategories = [
+  {
+    title: "Language Skills",
+    categoryIcon: Code2,
+    skills: [
+      { name: "c#", Icon: TbBrandCSharp, color: "#178600" },
+      { name: "c++", Icon: SiCplusplus, color: "#00599C" },
+      { name: "python", Icon: SiPython, color: "#3776AB" },
+      { name: "javascript", Icon: SiJavascript, color: "#F7DF1E" },
+      { name: "php", Icon: SiPhp, color: "#777BB4" },
+    ],
+  },
+  {
+    title: "Frameworks & Libraries",
+    categoryIcon: Blocks,
+    skills: [
+      { name: "next.js", Icon: SiNextdotjs, color: "#ffffff" },
+      { name: "node.js", Icon: SiNodedotjs, color: "#339933" },
+      { name: "express.js", Icon: SiExpress, color: "#ffffff" },
+      { name: "css3", Icon: TbBrandCss3, color: "#1572B6" },
+      { name: "html5", Icon: SiHtml5, color: "#E34F26" },
+      { name: "react", Icon: SiReact, color: "#61DAFB" },
+      { name: "tailwindcss", Icon: SiTailwindcss, color: "#38B2AC" },
+    ],
+  },
+  {
+    title: "Databases",
+    categoryIcon: Database,
+    skills: [
+      { name: "mysql", Icon: SiMysql, color: "#4479A1" },
+      { name: "postgresql", Icon: SiPostgresql, color: "#336791" },
+      { name: "mongodb", Icon: SiMongodb, color: "#47A248" },
+    ],
+  },
+  {
+    title: "Tools & Others",
+    categoryIcon: Wrench,
+    skills: [
+      { name: "vs code", Icon: TbBrandVscode, color: "#007ACC" },
+      { name: "figma", Icon: SiFigma, color: "#F24E1E" },
+      { name: "git", Icon: SiGit, color: "#F05032" },
+      { name: "docker", Icon: SiDocker, color: "#2496ED" },
+      { name: "firebase", Icon: SiFirebase, color: "#FFCA28" },
+      { name: "postman", Icon: SiPostman, color: "#FF6C37" },
+    ],
+  },
+];
 
 export default function Page() {
   return (
@@ -133,6 +210,63 @@ export default function Page() {
         </div>
       </section>
       <div className="w-full h-[1px] bg-white/20 my-4"></div>
+
+      {/* Skills Section */}
+      <section className="relative z-10 min-h-screen w-full px-8 py-24 sm:px-24 lg:px-32 flex flex-col items-center max-w-7xl mx-auto mt-12 sm:mt-0">
+        <div className="w-full flex flex-col items-start mb-24">
+          <h2 className="text-6xl sm:text-7xl md:text-8xl font-serif font-medium tracking-tight drop-shadow-2xl">
+            Skills
+          </h2>
+        </div>
+
+        <div className="w-full flex flex-col space-y-24">
+          {skillCategories.map((category, idx) => (
+            <div
+              key={idx}
+              className="flex flex-col items-center relative w-full"
+            >
+              {/* Giant Watermark Background */}
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[150px] sm:text-[250px] font-bold text-white/5 pointer-events-none select-none z-0"></div>
+
+              {/* Category Header */}
+              <div className="flex items-center justify-center w-full max-w-3xl mb-12 z-10">
+                <div className="h-[1px] flex-1 bg-gradient-to-r from-transparent to-white/20"></div>
+                <div className="flex items-center gap-4 text-white px-6">
+                  <div className="p-3 bg-[#e2e8f0]/10 rounded-full">
+                    <category.categoryIcon className="w-6 h-6 sm:w-8 sm:h-8 text-neutral-300" />
+                  </div>
+                  <h3 className="text-3xl sm:text-4xl font-bold tracking-wide">
+                    {category.title}
+                  </h3>
+                </div>
+                <div className="h-[1px] flex-1 bg-gradient-to-l from-transparent to-white/20"></div>
+              </div>
+
+              {/* Skills Grid */}
+              <div className="flex flex-wrap justify-center gap-6 sm:gap-10 z-10">
+                {category.skills.map((skill, sIdx) => (
+                  <div
+                    key={sIdx}
+                    className="group flex flex-col items-center gap-3 w-20 sm:w-24 cursor-default"
+                  >
+                    <div className="flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 bg-[#161c28] rounded-xl shadow-lg group-hover:-translate-y-1 transition-all duration-300">
+                      <skill.Icon
+                        className="w-8 h-8 sm:w-10 sm:h-10 transition-transform duration-300 group-hover:scale-110"
+                        style={{ color: skill.color }}
+                      />
+                    </div>
+                    <span className="text-xs sm:text-sm text-neutral-400 font-medium tracking-wide lowercase group-hover:text-white transition-colors duration-300 text-center">
+                      {skill.name}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <div className="w-full h-[1px] bg-white/20 my-4 max-w-7xl mx-auto"></div>
 
       {/* Experience Section */}
       <section className="relative z-10 min-h-screen w-full px-8 py-24 sm:px-24 lg:px-32 flex flex-col items-center max-w-7xl mx-auto mt-12 sm:mt-0">
