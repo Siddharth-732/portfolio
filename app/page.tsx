@@ -8,9 +8,11 @@ import {
   Blocks,
   Database,
   Wrench,
+  ExternalLink,
 } from "lucide-react";
 import { TbBrandCSharp, TbBrandCss3, TbBrandVscode } from "react-icons/tb";
 import {
+  SiGithub,
   SiCplusplus,
   SiPython,
   SiJavascript,
@@ -74,6 +76,39 @@ const skillCategories = [
       { name: "firebase", Icon: SiFirebase, color: "#FFCA28" },
       { name: "postman", Icon: SiPostman, color: "#FF6C37" },
     ],
+  },
+];
+
+const projects = [
+  {
+    title: "InstiCon",
+    category: "3D WEB PLATFORM",
+    description:
+      "A Unity6 3D community platform designed for real-time cross-college collaboration.",
+    tags: ["Unity6", "C#", "3D Modeling"],
+    link: "#",
+    github: "#",
+    image: "./hackbyte.jpg",
+  },
+  {
+    title: "Autonomous Drone",
+    category: "HARDWARE / ROBOTICS",
+    description:
+      "A 6-month autonomous drone development project. Awarded Best Autonomous Drone at SAE India25.",
+    tags: ["C++", "Hardware", "Robotics"],
+    link: "#",
+    github: "#",
+    image: "./hackbyte.jpg",
+  },
+  {
+    title: "Smart Traffic Management",
+    category: "AI & DATA ANALYSIS",
+    description:
+      "Built for Indian Railways to predict best routes and possibilities for trains (SIH25).",
+    tags: ["Python", "Machine Learning", "Data Analysis"],
+    link: "#",
+    github: "#",
+    image: "./hackbyte.jpg",
   },
 ];
 
@@ -494,6 +529,82 @@ export default function Page() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      <div className="w-full h-[1px] bg-white/20 my-4 max-w-7xl mx-auto"></div>
+
+      {/* Projects Section */}
+      <section className="relative z-10 w-full flex flex-col items-center max-w-[1400px] mx-auto pt-24 sm:pt-32 px-4 sm:px-8">
+        <div className="w-full flex flex-col items-start mb-24 px-4 sm:px-16">
+          <h2 className="text-6xl sm:text-7xl md:text-8xl font-serif font-medium tracking-tight drop-shadow-2xl">
+            Projects
+          </h2>
+        </div>
+
+        <div className="flex flex-col space-y-24 w-full">
+          {projects.map((project, idx) => {
+            const isEven = idx % 2 === 0;
+            return (
+              <div
+                key={idx}
+                className="flex flex-col lg:flex-row w-full bg-[#111] sm:rounded-[32px] overflow-hidden border border-white/5 hover:border-white/10 transition-colors duration-300"
+              >
+                {/* Image Container */}
+                <div className={`w-full lg:w-1/2 relative h-64 sm:h-80 lg:h-auto min-h-[300px] lg:min-h-[400px] bg-neutral-900 overflow-hidden order-1 ${isEven ? 'lg:order-1' : 'lg:order-2'}`}>
+                  <img 
+                    src={project.image} 
+                    alt={project.title} 
+                    className="w-full h-full object-cover transition-transform duration-700 hover:scale-105" 
+                  />
+                </div>
+
+                {/* Content Container */}
+                <div className={`w-full lg:w-1/2 flex flex-col justify-center p-8 sm:p-12 lg:p-16 order-2 ${isEven ? 'lg:order-2' : 'lg:order-1'}`}>
+                  {/* Overline */}
+                  <div className="text-teal-500 font-bold tracking-widest text-[10px] sm:text-xs uppercase mb-4">
+                    0{idx + 1} — {project.category || "PROJECT"}
+                  </div>
+
+                  <h3 className="font-serif font-bold text-3xl sm:text-4xl lg:text-5xl text-white mb-6">
+                    {project.title}
+                  </h3>
+
+                  <p className="text-neutral-400 text-sm sm:text-base leading-relaxed mb-8 max-w-lg">
+                    {project.description}
+                  </p>
+
+                  <div className="flex flex-wrap gap-3 mb-12">
+                    {project.tags.map((tag, tIdx) => (
+                      <span
+                        key={tIdx}
+                        className="text-[10px] sm:text-xs font-medium text-neutral-300 bg-white/5 border border-white/10 px-4 py-1.5 rounded-full uppercase tracking-wider"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+
+                  <div className="flex flex-wrap gap-8 mt-auto">
+                    <a
+                      href={project.github}
+                      className="flex items-center gap-2 text-white hover:text-teal-400 font-medium transition-colors"
+                    >
+                      <SiGithub className="w-5 h-5" />
+                      <span>Github</span>
+                    </a>
+                    <a
+                      href={project.link}
+                      className="flex items-center gap-2 text-white hover:text-teal-400 font-medium transition-colors"
+                    >
+                      <ExternalLink className="w-5 h-5" />
+                      <span>Live Site</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </section>
     </div>
