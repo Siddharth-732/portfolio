@@ -544,14 +544,13 @@ export default function Page() {
 
         <div className="flex flex-col space-y-24 w-full">
           {projects.map((project, idx) => {
-            const isEven = idx % 2 === 0;
             return (
               <div
                 key={idx}
                 className="flex flex-col lg:flex-row w-full bg-[#111] sm:rounded-[32px] overflow-hidden border border-white/5 hover:border-white/10 transition-colors duration-300"
               >
                 {/* Image Container */}
-                <div className={`w-full lg:w-1/2 relative h-64 sm:h-80 lg:h-auto min-h-[300px] lg:min-h-[400px] bg-neutral-900 overflow-hidden order-1 ${isEven ? 'lg:order-1' : 'lg:order-2'}`}>
+                <div className="w-full lg:w-1/2 relative h-64 sm:h-80 lg:h-auto min-h-[300px] lg:min-h-[400px] bg-neutral-900 overflow-hidden order-1 lg:order-1">
                   <img 
                     src={project.image} 
                     alt={project.title} 
@@ -560,7 +559,7 @@ export default function Page() {
                 </div>
 
                 {/* Content Container */}
-                <div className={`w-full lg:w-1/2 flex flex-col justify-center p-8 sm:p-12 lg:p-16 order-2 ${isEven ? 'lg:order-2' : 'lg:order-1'}`}>
+                <div className="w-full lg:w-1/2 flex flex-col justify-center p-8 sm:p-12 lg:p-16 order-2 lg:order-2">
                   {/* Overline */}
                   <div className="text-teal-500 font-bold tracking-widest text-[10px] sm:text-xs uppercase mb-4">
                     0{idx + 1} — {project.category || "PROJECT"}
