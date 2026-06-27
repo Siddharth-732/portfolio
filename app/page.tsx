@@ -133,7 +133,7 @@ export default function Page() {
         </div>
       </section>
       <div className="w-full h-[1px] bg-white/20 my-4"></div>
-      {/* Experience Section */}
+
       {/* Experience Section */}
       <section className="relative z-10 min-h-screen w-full px-8 py-24 sm:px-24 lg:px-32 flex flex-col items-center max-w-7xl mx-auto mt-12 sm:mt-0">
         <div className="w-full flex flex-col items-start mb-24">
@@ -156,7 +156,7 @@ export default function Page() {
 
             {/* Card Wrapper */}
             <div className="relative ml-6 sm:ml-12 w-full">
-              <div className="absolute -inset-1 bg-gradient-to-r from-yellow-600/20 to-yellow-400/20 rounded-[24px] blur-xl opacity-40 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="absolute -inset-1 bg-gradient-to-r from-yellow-600/20 to-yellow-400/20 rounded-[24px] blur-xl opacity-75 group-hover:opacity-100 transition-opacity duration-500"></div>
               {/* Card */}
               <div className="relative w-full h-full bg-[#111] rounded-[24px] p-6 sm:p-10 border border-white/5 hover:border-white/10 transition-colors duration-300">
                 <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-6">
@@ -186,7 +186,7 @@ export default function Page() {
             </div>
             <div className="absolute left-[80px] sm:left-[150px] -translate-x-1/2 mt-2 w-2.5 h-2.5 bg-neutral-600 group-hover:bg-neutral-400 transition-colors duration-300 rounded-full ring-[6px] ring-[#0a0a0a]"></div>
             <div className="relative ml-6 sm:ml-12 w-full">
-              <div className="absolute -inset-1 bg-gradient-to-r from-yellow-600/20 to-yellow-400/20 rounded-[24px] blur-xl opacity-40 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="absolute -inset-1 bg-gradient-to-r from-yellow-600/20 to-yellow-400/20 rounded-[24px] blur-xl opacity-75 group-hover:opacity-100 transition-opacity duration-500"></div>
               <div className="relative w-full h-full bg-[#111] rounded-[24px] p-6 sm:p-10 border border-white/5 hover:border-white/10 transition-colors duration-300">
                 <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-6">
                   <div className="flex flex-col">
@@ -216,7 +216,7 @@ export default function Page() {
             </div>
             <div className="absolute left-[80px] sm:left-[150px] -translate-x-1/2 mt-2 w-2.5 h-2.5 bg-neutral-600 group-hover:bg-neutral-400 transition-colors duration-300 rounded-full ring-[6px] ring-[#0a0a0a]"></div>
             <div className="relative ml-6 sm:ml-12 w-full">
-              <div className="absolute -inset-1 bg-gradient-to-r from-yellow-600/20 to-yellow-400/20 rounded-[24px] blur-xl opacity-40 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="absolute -inset-1 bg-gradient-to-r from-yellow-600/20 to-yellow-400/20 rounded-[24px] blur-xl opacity-75 group-hover:opacity-100 transition-opacity duration-500"></div>
               <div className="relative w-full h-full bg-[#111] rounded-[24px] p-6 sm:p-10 border border-white/5 hover:border-white/10 transition-colors duration-300">
                 <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-6">
                   <div className="flex flex-col">
@@ -249,7 +249,7 @@ export default function Page() {
             </div>
             <div className="absolute left-[80px] sm:left-[150px] -translate-x-1/2 mt-2 w-2.5 h-2.5 bg-neutral-600 group-hover:bg-neutral-400 transition-colors duration-300 rounded-full ring-[6px] ring-[#0a0a0a]"></div>
             <div className="relative ml-6 sm:ml-12 w-full">
-              <div className="absolute -inset-1 bg-gradient-to-r from-yellow-600/20 to-yellow-400/20 rounded-[24px] blur-xl opacity-40 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="absolute -inset-1 bg-gradient-to-r from-yellow-600/20 to-yellow-400/20 rounded-[24px] blur-xl opacity-75 group-hover:opacity-100 transition-opacity duration-500"></div>
               <div className="relative w-full h-full bg-[#111] rounded-[24px] p-6 sm:p-10 border border-white/5 hover:border-white/10 transition-colors duration-300">
                 <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-6">
                   <div className="flex flex-col">
@@ -282,7 +282,7 @@ export default function Page() {
             </div>
             <div className="absolute left-[80px] sm:left-[150px] -translate-x-1/2 mt-2 w-2.5 h-2.5 bg-neutral-600 group-hover:bg-neutral-400 transition-colors duration-300 rounded-full ring-[6px] ring-[#0a0a0a]"></div>
             <div className="relative ml-6 sm:ml-12 w-full">
-              <div className="absolute -inset-1 bg-gradient-to-r from-yellow-600/20 to-yellow-400/20 rounded-[24px] blur-xl opacity-40 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="absolute -inset-1 bg-gradient-to-r from-yellow-600/20 to-yellow-400/20 rounded-[24px] blur-xl opacity-75 group-hover:opacity-100 transition-opacity duration-500"></div>
               <div className="relative w-full h-full bg-[#111] rounded-[24px] p-6 sm:p-10 border border-white/5 hover:border-white/10 transition-colors duration-300">
                 <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-6">
                   <div className="flex flex-col">
@@ -312,7 +312,7 @@ export default function Page() {
             </div>
             <div className="absolute left-[80px] sm:left-[150px] -translate-x-1/2 mt-2 w-2.5 h-2.5 bg-neutral-600 group-hover:bg-neutral-400 transition-colors duration-300 rounded-full ring-[6px] ring-[#0a0a0a]"></div>
             <div className="relative ml-6 sm:ml-12 w-full">
-              <div className="absolute -inset-1 bg-gradient-to-r from-yellow-600/20 to-yellow-400/20 rounded-[24px] blur-xl opacity-40 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="absolute -inset-1 bg-gradient-to-r from-yellow-600/20 to-yellow-400/20 rounded-[24px] blur-xl opacity-75 group-hover:opacity-100 transition-opacity duration-500"></div>
               <div className="relative w-full h-full bg-[#111] rounded-[24px] p-6 sm:p-10 border border-white/5 hover:border-white/10 transition-colors duration-300">
                 <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-6">
                   <div className="flex flex-col">
@@ -341,7 +341,7 @@ export default function Page() {
             </div>
             <div className="absolute left-[80px] sm:left-[150px] -translate-x-1/2 mt-2 w-2.5 h-2.5 bg-neutral-600 group-hover:bg-neutral-400 transition-colors duration-300 rounded-full ring-[6px] ring-[#0a0a0a]"></div>
             <div className="relative ml-6 sm:ml-12 w-full">
-              <div className="absolute -inset-1 bg-gradient-to-r from-yellow-600/20 to-yellow-400/20 rounded-[24px] blur-xl opacity-40 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="absolute -inset-1 bg-gradient-to-r from-yellow-600/20 to-yellow-400/20 rounded-[24px] blur-xl opacity-75 group-hover:opacity-100 transition-opacity duration-500"></div>
               <div className="relative w-full h-full bg-[#111] rounded-[24px] p-6 sm:p-10 border border-white/5 hover:border-white/10 transition-colors duration-300">
                 <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-6">
                   <div className="flex flex-col">
