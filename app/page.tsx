@@ -552,10 +552,10 @@ export default function Page() {
             return (
               <div
                 key={idx}
-                className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 w-full items-center"
+                className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 w-full items-center bg-white/[0.03] border border-white/5 p-6 sm:p-10 lg:p-12"
               >
                 {/* Image Container */}
-                <div className={`relative w-full h-64 sm:h-96 min-h-[300px] rounded-[32px] overflow-hidden border border-white/5 group bg-[#0a0f1a] shadow-2xl ${isEven ? 'lg:order-1' : 'lg:order-2'}`}>
+                <div className={`relative w-full h-64 sm:h-96 min-h-[300px] overflow-hidden border border-white/5 group bg-[#0a0f1a] shadow-2xl ${isEven ? 'lg:order-1' : 'lg:order-2'}`}>
                   <img
                     src={project.image}
                     alt={project.title}
