@@ -85,14 +85,14 @@ const skillCategories = [
 
 const projects = [
   {
-    title: "InstiCon",
+    title: "Bind",
     category: "3D WEB PLATFORM",
     description:
       "A Unity6 3D community platform designed for real-time cross-college collaboration.",
     tags: ["Unity6", "C#", "3D Modeling"],
     link: "#",
     github: "#",
-    image: "./hackbyte.jpg",
+    image: "/insticon.png",
   },
   {
     title: "Autonomous Drone",
@@ -102,7 +102,7 @@ const projects = [
     tags: ["C++", "Hardware", "Robotics"],
     link: "#",
     github: "#",
-    image: "./hackbyte.jpg",
+    image: "/drone.png",
   },
   {
     title: "Smart Traffic Management",
@@ -112,7 +112,7 @@ const projects = [
     tags: ["Python", "Machine Learning", "Data Analysis"],
     link: "#",
     github: "#",
-    image: "./hackbyte.jpg",
+    image: "/traffic.png",
   },
 ];
 
@@ -546,62 +546,63 @@ export default function Page() {
           </h2>
         </div>
 
-        <div className="flex flex-col space-y-24 w-full">
+        <div className="flex flex-col space-y-32 w-full mt-12">
           {projects.map((project, idx) => {
+            const isEven = idx % 2 === 0;
             return (
               <div
                 key={idx}
-                className="flex flex-col lg:flex-row w-full bg-[#111] sm:rounded-[32px] overflow-hidden border border-white/5 hover:border-white/10 transition-colors duration-300"
+                className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 w-full items-center"
               >
                 {/* Image Container */}
-                <div className="w-full lg:w-1/2 relative h-64 sm:h-80 lg:h-auto min-h-[300px] lg:min-h-[400px] bg-neutral-900 overflow-hidden order-1 lg:order-1">
+                <div className={`relative w-full h-64 sm:h-96 min-h-[300px] rounded-[32px] overflow-hidden border border-white/5 group bg-[#0a0f1a] shadow-2xl ${isEven ? 'lg:order-1' : 'lg:order-2'}`}>
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                 </div>
 
                 {/* Content Container */}
-                <div className="w-full lg:w-1/2 flex flex-col justify-center p-8 sm:p-12 lg:p-16 order-2 lg:order-2">
-                  {/* Overline */}
-                  <div className="text-teal-500 font-bold tracking-widest text-[10px] sm:text-xs uppercase mb-4">
-                    0{idx + 1} — {project.category || "PROJECT"}
-                  </div>
-
-                  <h3 className="font-serif font-bold text-3xl sm:text-4xl lg:text-5xl text-white mb-6">
-                    {project.title}
-                  </h3>
-
-                  <p className="text-neutral-400 text-sm sm:text-base leading-relaxed mb-8 max-w-lg">
-                    {project.description}
-                  </p>
-
-                  <div className="flex flex-wrap gap-3 mb-12">
+                <div className={`flex flex-col justify-center ${isEven ? 'lg:order-2' : 'lg:order-1'}`}>
+                  
+                  {/* Tags */}
+                  <div className="flex flex-wrap gap-3 mb-6">
                     {project.tags.map((tag, tIdx) => (
                       <span
                         key={tIdx}
-                        className="text-[10px] sm:text-xs font-medium text-neutral-300 bg-white/5 border border-white/10 px-4 py-1.5 rounded-full uppercase tracking-wider"
+                        className="text-[10px] sm:text-xs font-bold text-neutral-400 bg-white/5 border border-white/10 px-4 py-1.5 rounded-full uppercase tracking-widest"
                       >
                         {tag}
                       </span>
                     ))}
                   </div>
 
-                  <div className="flex flex-wrap gap-8 mt-auto">
+                  {/* Title */}
+                  <h3 className="font-serif italic text-5xl sm:text-6xl text-white mb-6">
+                    {project.title}
+                  </h3>
+
+                  {/* Description */}
+                  <p className="text-neutral-400 text-sm sm:text-base leading-relaxed mb-10 max-w-lg">
+                    {project.description}
+                  </p>
+
+                  {/* Links */}
+                  <div className="flex flex-wrap gap-8">
                     <a
                       href={project.github}
-                      className="flex items-center gap-2 text-white hover:text-teal-400 font-medium transition-colors"
+                      className="flex items-center gap-2 text-white hover:text-white/70 font-bold text-sm tracking-wider transition-colors"
                     >
-                      <SiGithub className="w-5 h-5" />
-                      <span>Github</span>
+                      <span className="text-lg">{"< >"}</span>
+                      <span>Github ➔</span>
                     </a>
                     <a
                       href={project.link}
-                      className="flex items-center gap-2 text-white hover:text-teal-400 font-medium transition-colors"
+                      className="flex items-center gap-2 text-white hover:text-white/70 font-bold text-sm tracking-wider transition-colors"
                     >
-                      <ExternalLink className="w-5 h-5" />
-                      <span>Live Site</span>
+                      <span className="text-lg">🚀</span>
+                      <span>Live Demo ➔</span>
                     </a>
                   </div>
                 </div>
