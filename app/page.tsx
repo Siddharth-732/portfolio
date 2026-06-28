@@ -1,8 +1,6 @@
 import Prism from "../components/Prism";
 import Typewriter from "../components/Typewriter";
 import {
-  Users,
-  FolderGit2,
   Download,
   Code2,
   Blocks,
@@ -10,7 +8,7 @@ import {
   Wrench,
   ExternalLink,
 } from "lucide-react";
-import { TbBrandCSharp, TbBrandCss3, TbBrandVscode } from "react-icons/tb";
+import { TbBrandCSharp, TbBrandVscode } from "react-icons/tb";
 import {
   SiGithub,
   SiCplusplus,
@@ -20,7 +18,7 @@ import {
   SiNextdotjs,
   SiNodedotjs,
   SiExpress,
-  SiHtml5,
+  SiGitlab,
   SiReact,
   SiTailwindcss,
   SiMysql,
@@ -32,6 +30,10 @@ import {
   SiFirebase,
   SiPostman,
 } from "react-icons/si";
+
+const CustomSlackIcon = ({ className }: { className?: string }) => (
+  <img src="/slack.svg" alt="Slack" className={className} />
+);
 
 const skillCategories = [
   {
@@ -72,9 +74,11 @@ const skillCategories = [
       { name: "vs code", Icon: TbBrandVscode, color: "#007ACC" },
       { name: "figma", Icon: SiFigma, color: "#F24E1E" },
       { name: "git", Icon: SiGit, color: "#F05032" },
+      { name: "gitlab", Icon: SiGitlab, color: "#F05032" },
       { name: "docker", Icon: SiDocker, color: "#2496ED" },
       { name: "firebase", Icon: SiFirebase, color: "#FFCA28" },
       { name: "postman", Icon: SiPostman, color: "#FF6C37" },
+      { name: "Slack", Icon: CustomSlackIcon, color: "" },
     ],
   },
 ];
@@ -551,10 +555,10 @@ export default function Page() {
               >
                 {/* Image Container */}
                 <div className="w-full lg:w-1/2 relative h-64 sm:h-80 lg:h-auto min-h-[300px] lg:min-h-[400px] bg-neutral-900 overflow-hidden order-1 lg:order-1">
-                  <img 
-                    src={project.image} 
-                    alt={project.title} 
-                    className="w-full h-full object-cover transition-transform duration-700 hover:scale-105" 
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
                   />
                 </div>
 
