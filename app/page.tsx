@@ -7,6 +7,7 @@ import {
   Database,
   Wrench,
   ExternalLink,
+  Mail,
 } from "lucide-react";
 import { TbBrandCSharp, TbBrandVscode } from "react-icons/tb";
 import {
@@ -546,7 +547,7 @@ export default function Page() {
           </h2>
         </div>
 
-        <div className="flex flex-col space-y-32 w-full mt-12">
+        <div className="flex flex-col space-y-8 w-full mt-12">
           {projects.map((project, idx) => {
             const isEven = idx % 2 === 0;
             return (
@@ -555,7 +556,9 @@ export default function Page() {
                 className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 w-full items-center bg-white/[0.03] border border-white/5 p-6 sm:p-10 lg:p-12"
               >
                 {/* Image Container */}
-                <div className={`relative w-full h-64 sm:h-96 min-h-[300px] overflow-hidden border border-white/5 group bg-[#0a0f1a] shadow-2xl ${isEven ? 'lg:order-1' : 'lg:order-2'}`}>
+                <div
+                  className={`relative w-full h-64 sm:h-96 min-h-[300px] overflow-hidden border border-white/5 group bg-[#0a0f1a] shadow-2xl ${isEven ? "lg:order-1" : "lg:order-2"}`}
+                >
                   <img
                     src={project.image}
                     alt={project.title}
@@ -564,8 +567,9 @@ export default function Page() {
                 </div>
 
                 {/* Content Container */}
-                <div className={`flex flex-col justify-center ${isEven ? 'lg:order-2' : 'lg:order-1'}`}>
-                  
+                <div
+                  className={`flex flex-col justify-center ${isEven ? "lg:order-2" : "lg:order-1"}`}
+                >
                   {/* Tags */}
                   <div className="flex flex-wrap gap-3 mb-6">
                     {project.tags.map((tag, tIdx) => (
@@ -609,6 +613,79 @@ export default function Page() {
               </div>
             );
           })}
+        </div>
+      </section>
+
+      <div className="w-full h-[1px] bg-white/20 my-4 max-w-7xl mx-auto"></div>
+
+      {/* Contact Section */}
+      <section className="relative z-10 w-full flex flex-col items-center max-w-[1400px] mx-auto py-24 sm:py-32 px-4 sm:px-8">
+        <div className="w-full flex flex-col items-center mb-16 px-4">
+          <h2 className="text-6xl sm:text-7xl md:text-8xl font-serif font-medium tracking-tight drop-shadow-2xl text-center">
+            Let's Talk
+          </h2>
+          <p className="text-neutral-400 mt-6 text-center max-w-xl text-lg sm:text-xl">
+            Interested in building something amazing together? Drop me a message
+            and I'll get back to you as soon as possible.
+          </p>
+        </div>
+
+        <div className="w-full max-w-3xl bg-white/[0.03] border border-white/5 p-8 sm:p-12">
+          <form className="flex flex-col space-y-8 w-full">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+              <div className="flex flex-col space-y-2">
+                <label
+                  htmlFor="name"
+                  className="text-sm font-bold tracking-widest uppercase text-neutral-400"
+                >
+                  Name
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  placeholder="John Doe"
+                  className="bg-transparent border-b border-white/20 focus:border-white text-white py-3 px-2 outline-none transition-colors placeholder:text-neutral-600"
+                />
+              </div>
+              <div className="flex flex-col space-y-2">
+                <label
+                  htmlFor="email"
+                  className="text-sm font-bold tracking-widest uppercase text-neutral-400"
+                >
+                  Email
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  placeholder="john@example.com"
+                  className="bg-transparent border-b border-white/20 focus:border-white text-white py-3 px-2 outline-none transition-colors placeholder:text-neutral-600"
+                />
+              </div>
+            </div>
+
+            <div className="flex flex-col space-y-2">
+              <label
+                htmlFor="message"
+                className="text-sm font-bold tracking-widest uppercase text-neutral-400"
+              >
+                Message
+              </label>
+              <textarea
+                id="message"
+                rows={4}
+                placeholder="Tell me about your project..."
+                className="bg-transparent border-b border-white/20 focus:border-white text-white py-3 px-2 outline-none transition-colors resize-none placeholder:text-neutral-600"
+              ></textarea>
+            </div>
+
+            <button
+              type="button"
+              className="flex items-center justify-center gap-3 w-full sm:w-auto self-end bg-white text-black px-10 py-4 font-bold uppercase tracking-widest hover:bg-neutral-200 transition-colors mt-4"
+            >
+              <Mail className="w-5 h-5" />
+              <span>Send Message</span>
+            </button>
+          </form>
         </div>
       </section>
     </div>
